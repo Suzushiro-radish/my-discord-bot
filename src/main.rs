@@ -15,6 +15,10 @@ impl EventHandler for Bot {
             if let Err(e) = msg.channel_id.say(&ctx.http, "world!").await {
                 error!("Error sending message: {:?}", e);
             }
+        } else if msg.content == "あやまりな" {
+            if let Err(e) = msg.channel_id.say(&ctx.http, "ごめすでごんす").await {
+                error!("Error sending message: {:?}", e);
+            }
         }
     }
 
